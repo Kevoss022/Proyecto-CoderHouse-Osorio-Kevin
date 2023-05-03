@@ -1,0 +1,396 @@
+.body-servicios{
+    width: 100%;
+    height: 100vh;
+
+    margin: 0px;
+}
+
+.container-servicios{
+
+    width: 100%;
+    height: 100vh;
+
+    .esencial-page{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        width: 100%;
+        height: 100%;
+
+        background: url(../media/images/servicios-bck.jpg);
+        background-size: cover;
+        
+        @include xl{
+            background-position: center;
+        }
+
+        @include sm{
+            margin-top: -30px;
+        }
+
+        &__contenido{
+            width: 85%;
+            height: 80%;
+
+            @include xl{
+                width: 88%;
+            }
+
+            @include mediaquery (1150px){
+                width: 100%;
+                height: 85%;
+            }
+
+            &__text{
+                position: relative;
+
+                width: 100%;
+                height: 70%;
+
+                @include md{
+                    height: 60%;
+                }
+
+                &__container{
+                    position: absolute;
+                    top: 30px;
+                    left: 80px;
+
+                    @include xl{
+                        left: 30px;
+                    }
+
+                    @include sm{
+                        left: 10px;
+                    }
+
+                    span{
+                        font-size: calc(20px + 1vw);
+                        
+                        color: whitesmoke;
+                        
+                        @include sm{
+                            font-size: calc(15px + 1vw);
+                        }
+                    }
+                    
+                    h1{
+                        margin-top: 15px;
+                        
+                        font-size: calc(25px + 1.5vw);
+                        font-weight: bolder;
+                        line-height: 70px;
+                        
+                        color: whitesmoke;
+                        
+                        @include ms{
+                            font-size: calc(20px + 1.5vw);
+                            line-height: 40px;
+                        }
+                        
+                        @include sm{
+                            font-size: calc(15px + 1.2vw);
+                        }
+                        
+                        cursor: default;
+                        
+                        b{
+                            font-size: 1.5em;
+                        }
+
+
+                        .gold-text{
+                            color: rgb(231, 178, 43);
+                        }
+                    }
+
+                    .plus-container{
+                        display: flex;
+                        justify-content: space-between;
+
+                        margin-left: 40px;
+
+                        @include xl{
+                            width: 700px;
+
+                            margin-left: 0px;
+                        }
+
+                        @include md{
+                            width: 100%;
+                        }
+
+                        @include ms{
+                            justify-content: center;
+                            width: 100%;
+                        }
+
+                        
+                        .plus-box{
+                            width: 250px;
+                            
+                            margin-top: 20px;
+                            margin-right: 100px;
+                            
+                            text-align: center;
+                            font-size: calc(12px + 0.7vw);
+                            font-weight: bolder;
+                            
+                            cursor: default;
+                            
+                            @include xl{
+                                width: 200px;
+                                
+                                margin-right: 0px;
+                            }
+
+                            @include md{
+                                width: 25%;
+                            }
+                            
+                            @include ms{
+                                width: 20%;
+                            }
+
+                            @include sm{
+                                width: 30%;
+                                font-size: calc(12px + 0.2vw);
+                            }
+
+                            p{
+                                margin-bottom: 0px;
+
+                                padding: 3px 0px;
+                            }
+
+                            &--deluxe{
+                                color: rgba(247, 211, 7, 0.95);
+                                background: linear-gradient(to right, rgb(67, 67, 67) 0%, rgb(0, 0, 0) 100%);
+                            }
+
+                            &--extra{   
+                                color: #050505;
+                                background: radial-gradient(circle farthest-side, rgb(252, 234, 187), rgb(248, 181, 0));
+                            }
+
+                            &--essential{
+                                color: rgb(71, 71, 71);
+                                background: linear-gradient(to right, rgb(143, 143, 143), rgb(245, 245, 245));
+                            }
+                        }
+                    }
+
+                    .plus-description{
+                        width: 1000px;
+
+                        margin-top: 80px;
+                        margin-left: 40px;
+
+                        font-size: calc(15px + 0.7vw);
+                        font-weight: 200;
+
+                        color: whitesmoke;
+
+                        cursor: default;
+
+                        @include xl{
+                            margin-left: 0px;
+                        }
+
+                        @include lg{
+                            width: 100%;
+                        }
+
+                        @include ms{
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+            
+            &__boxes{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-start;
+
+                width: 100%;
+                height: 30%;
+                
+                @include md{
+                    display: grid;
+
+                    height: 40%;
+
+                    grid-template-rows: 50% 50%;
+                }
+
+                &__box{
+                    position: relative;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    width: 300px;
+                    height: 70%;
+                    
+                    background-image: linear-gradient(to right, #434343 0%, black 100%);
+                    
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(10px);
+
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    transition: 2s;
+
+                    @include xl{
+                        width: 20%;
+                    }
+
+                    @include md{
+                        width: 250px;
+                        height: 80%;
+                    }
+
+                    @include ms{
+                        width: 200px;
+                    }
+
+                    @include sm{
+                        width: 125px;
+                        height: 60%;
+                    }
+
+                    &::before{
+                        content: "";
+                        background-image: conic-gradient(
+                                        #ececec 20deg,
+                                        transparent 120deg);
+                        width: 250%;
+                        height: 250%;
+                        position: absolute;
+                        top: -120px;
+                        animation: rotate 4s linear infinite;
+
+                        @include sm{
+                            display: none;
+                        }
+                    }
+
+                    &::after{
+                        content: "";
+
+                        position: absolute;
+                        top: 2.8px;
+                        left: 4px;
+
+                        width: 97%;
+                        height: 96%;
+
+                        background: #101010;
+
+                        @include sm{
+                            display: none;
+                        }
+                    }
+
+                    i{
+                        margin-top: 20px;
+
+                        font-size: calc(15px + 1.6vw);
+
+                        color: whitesmoke;
+
+                        position: absolute;
+
+                        z-index: 10;
+                    }
+                    
+                    img{
+                        margin-top: 20px;
+                        
+                        height: 30%;
+                        width: auto;
+
+                        z-index: 10;
+                    }
+                    
+                    p{
+                        position: absolute;
+                        bottom: 10px;
+                        
+                        width: 100%;
+                        
+                        text-align: center;
+                        font-size: calc(10px + 0.5vw);
+                        
+                        color: whitesmoke;
+
+                        z-index: 10;
+                    }
+                    
+                    &--1{
+
+                        @include md{
+                            grid-row: 1/2;
+                        }
+
+                        // &::before{
+                        //     content: "";
+                        //     background-image: conic-gradient(
+                        //                     #ececec 20deg,
+                        //                     transparent 120deg);
+                        //     width: 250%;
+                        //     height: 250%;
+                        //     position: absolute;
+                        //     top: -120px;
+                        //     animation: rotate 4s linear infinite;
+                        // }
+
+                        // &::after{
+                        //     content: "";
+
+                        //     position: absolute;
+                        //     top: 2.8px;
+                        //     left: 4px;
+
+                        //     width: 97%;
+                        //     height: 96%;
+
+                        //     color: #ff0052;
+                        //     background: #101010;
+                        //     box-shadow: inset 20px 20px 20px #0000008c;
+                        // }
+                    }
+                    
+                    &--2{
+                        img{
+                            margin-top: 25px;
+                            
+                            height: 50%;
+                        }
+
+                        @include md{
+                            grid-row: 1/2;
+                        }
+                    }
+                    
+                    &--3{
+                        @include md{
+                            grid-row: 2/3;
+                        }
+                    }
+                    
+                    &--4{
+                        @include md{
+                            grid-row: 2/3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

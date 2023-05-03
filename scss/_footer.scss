@@ -1,0 +1,268 @@
+footer{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 295px;
+
+    background-color: #050505;
+
+    z-index: 200;
+
+    @include lg{
+        height: auto;
+    }
+
+    .footer__principal{
+        display: flex;
+        width: 100%;
+        height: 80%;
+
+        @include lg{
+            height: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 150px 200px;
+            grid-template-areas: 
+            "links asistencia"
+            "logos logos"
+            ;
+        }
+
+        @include ms{
+            height: auto;
+    
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 120px 120px 120px;
+            grid-template-areas: 
+            "links"
+            "asistencia"
+            "logos"
+            ;
+        }
+
+        .footer__links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            width: 30%;
+            height: 100%;
+            margin-top: 50px;
+        
+            font-size: 1.2em;
+            font-weight: 600;
+        
+            color: whitesmoke;
+
+            @include lg{
+                width: 100%;
+
+                grid-area: links;
+            }
+    
+            p{
+                margin-top: 10px;
+                margin-bottom: 0px;
+    
+                cursor: default;
+
+                @include lg{
+                    font-size: calc(12px + 0.4vw);
+                }
+
+                @include md{
+                    font-size: calc(15px + 0.2vw);
+                }
+            }
+    
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+    
+                width: 70%;
+                height: 80%;
+    
+                list-style: none;
+
+                @include md{
+                    width: 90%;
+                }
+
+                @include ms{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+        
+                    width: 100%;
+                    height: 80%;
+        
+                    list-style: none;
+                }
+    
+                li{
+                    margin-right: 40px;
+    
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        text-decoration: none;
+                        font-size: 0.9em;
+    
+                        color: whitesmoke;
+    
+                        transition: 0.2s;
+
+                        @include xl{
+                            font-size: 0.7em;
+                        }
+
+                        @include lg{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            text-decoration: none;
+                            font-size: calc(8px + 0.6vw);
+
+                            color: whitesmoke;
+
+                            transition: 0.2s;
+                        }
+
+                        @include md{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            text-decoration: none;
+                            font-size: calc(10px + 0.4vw);
+
+                            color: whitesmoke;
+
+                            transition: 0.2s;
+                        }
+    
+                        &:hover{
+                            font-size: 1.5em;
+                            padding: 10px;
+    
+                            border-radius: 20px;
+    
+                            color: #050505;
+                            background-color: whitesmoke;
+                        }
+                    }
+    
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+            }
+    
+            &--asistencia{
+                width: 40%;
+                height: 100%;
+
+                @include lg{
+                    grid-area: asistencia;
+
+                    width: 100%;
+                }
+        
+                ul{
+                    li{
+                        a:hover{
+                            font-size: inherit;
+                            padding: 0px;
+                            font-size: 0.9em;
+                
+                            border-radius: 0px;
+                
+                            color: rgb(180, 180, 180);
+                            background-color: inherit;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__logos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            width: 30%;
+            height: 100%;
+
+            @include lg{
+                width: 100%;
+                grid-area: logos;
+            }
+    
+            img{
+                margin-right: 60px;
+    
+                height: 25%;
+                width: auto;
+
+                @include xl{
+                    margin: 5px;
+                    height: 20%;
+                }
+
+                @include lg{
+                    margin: 20px;
+
+                    height: 35%;
+                    width: auto;
+                }
+
+                @include md{
+                    height: 30%;
+                    width: auto;
+                }
+
+                @include ms{
+                    margin: 30px 10px 10px 10px;
+        
+                    height: 30%;
+                }
+    
+                &:nth-child(3):hover{
+                    box-shadow: 0px 0px 10px 1px whitesmoke;
+                }
+            }
+        }
+    }
+
+
+    .footer__derechos{
+        padding: 20px;
+    
+        text-align: center;
+    
+        cursor: default;
+    
+        background-color: #050505;
+
+        p{
+            font-size: calc(8px + 0.6vw);
+
+            margin-bottom: 0px;
+
+            color: whitesmoke;
+        }
+    }
+}
+

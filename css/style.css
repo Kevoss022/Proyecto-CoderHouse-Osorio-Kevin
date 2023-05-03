@@ -1,0 +1,1043 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+    background-color: #050505;
+    /* background: url(../media/images/1303682.jpg); */
+}
+
+body::-webkit-scrollbar{
+    width: 5px;
+    background-color: #050505;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: whitesmoke;
+}
+
+nav{
+    z-index: 200;
+}
+
+.nav-color{
+    border-bottom: 2px solid rgba(245, 245, 245, 0.2);
+
+    background-color: rgba(255, 255, 255, 0.02);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+
+    box-shadow: inset 0px -20px 50px 5px rgba(5, 5, 5, 0.3);
+
+    z-index: 100;
+}
+
+.navbar-brand{
+    padding: 30px;
+}
+    .navbar-brand img{
+        width: calc(40px + 1vw);
+        height: auto;
+    }
+
+.nav-link{
+    margin-right: 60px;
+
+    font-size: calc(12px + 0.5vw);
+
+    color: whitesmoke;
+
+    transition: 0.5s;
+}
+    .nav-link:hover{
+        color: #050505;
+
+        text-shadow: 3px 3px 20px #050505,
+        -2px 1px 30px #050505;
+    }
+
+.navbar-togglers{
+    background: whitesmoke;
+}
+
+
+.link-button{
+    display: inline-block;
+
+    padding: 12px 30px 12px 30px;
+    
+    color: whitesmoke;
+    background-color: rgba(29, 29, 29, 0.57);
+    
+    /* font-size: 1.2em; */
+    font-size: calc(10px + 0.5vw);
+    font-weight: 700;
+    text-decoration: none;
+    
+    border-radius: 50px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    
+    transition: 0.5s;
+}
+    .link-button:hover{
+        text-shadow: 2px 2px 20px whitesmoke,
+        -1px 0px 30px whitesmoke;
+        
+        transition: 0.5s;
+
+        color: #050505;
+        background-color: whitesmoke;
+    }
+    
+
+.grid-landing{
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 120px 100px 900px;
+
+    background-color: antiquewhite;
+}
+    .botonera{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        grid-column: 2/3;
+        grid-row: 2/3;
+    
+        background-color: rgba(0, 0, 0, 0.02);  
+        box-shadow: inset 0px -20px 50px 2px rgba(5, 5, 5, 0.3),
+        inset 0px 0px 100px 0.5px rgba(0, 0, 0, 0.2);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+
+        transition: .5s;
+        z-index: 10;
+    }
+        .botonera__login-container{
+            margin-right: 60px;
+    
+            font-size: calc(12px + 0.5vw);
+        }
+            .botonera__login-container a{
+                text-decoration: none;
+    
+    
+                color: whitesmoke;
+    
+                transition: 0.8s;
+            }
+    
+            .botonera__login-container a:hover{
+                color: #98c4ff;
+                text-shadow: 3px 3px 20px #0b60cf,
+                -2px 1px 30px #0b60cf;
+            }
+    
+        .botonera__search-form{
+            position: relative;
+    
+            margin-right: 150px;
+        }
+            .botonera__search-form input{
+                padding: 10px;
+    
+                border: none;
+                border-radius: 20px 0px 0px 20px;
+                outline: 2px solid whitesmoke;
+    
+                background-color: #050505;
+    
+                caret-color: whitesmoke;
+                transition: 1s;
+            }
+    
+            .botonera__search-form button{
+                position: absolute;                        
+                top: -2px;
+    
+                width: 40px;
+                padding: 12px;
+                            
+                border: none;
+                border-radius: 0px 20px 20px 0px;
+    
+                transition: 0.5s;
+            }
+                .botonera__search-form button i{
+                    font-size: 1.2em;
+    
+                    color: #111;
+                }
+    
+            .botonera__search-form input::placeholder{
+                color: whitesmoke;
+            }
+    
+            .botonera__search-form input[type="text"]:focus{
+                background-color: whitesmoke;
+                box-shadow: whitesmoke 0px 0px 20px 3px;
+    
+                transition: .5s;
+            }
+    
+            .botonera__search-form input[type="text"]:focus + button[type="submit"]{
+                background-color: #0b60cf;
+                
+                box-shadow: #004094 4px 0px 20px 3px;
+    
+                transition: .3s;
+            }
+    
+            .botonera__search-form input[type="text"]:focus + button[type="submit"] i{
+                color: whitesmoke;
+                    
+                transition: .3s;
+            }
+
+    .carrousel-landing{
+        position: relative;
+
+        grid-column: 1/3;
+        grid-row: 1/4;
+
+        background-color: brown;
+    }
+        .carrousel-landing__aside{
+            position: absolute;
+            bottom: 250px;
+            left: 0;
+
+            width: 25%;
+            height: 750px;
+
+            background-color: rgba(255, 255, 255, 0.02);  
+            box-shadow: inset 0px -20px 50px 2px rgba(5, 5, 5, 0.3);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+
+            border-right: 2px solid rgba(245, 245, 245, 0.2);
+
+            transition: 2s;
+            z-index: 10;
+        }
+            .carrousel-landing__aside img{
+                width: 111.5%;
+                height: 100%;
+            }
+
+            .aside-grid__text{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                bottom: 0px;
+        
+                margin-bottom: 40px;
+        
+                height: 25%;
+                width: 100%;
+            }
+                .aside-grid__text h2{
+                    text-align: center;
+                    line-height: 0.9em;
+                    font-size: calc(20px + 1vw);
+                    
+                    color: #050505;
+        
+                    margin-bottom: 20px;
+        
+                    cursor: default;
+                }
+                
+                .aside-grid__text h2 b{
+                    font-size: .5em;
+        
+                    color: #050505;
+                }
+        
+            .aside-button{
+                background-color: #050505;
+                backface-visibility: none;
+            }
+                .aside-button:hover{
+                    background-color: whitesmoke;
+                    color: #0e0e0e;
+        
+                    box-shadow: 0px 0px 50px 10px whitesmoke;
+                }
+
+        .aside-responsive{
+            display: none;
+        }
+
+.carrousel{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+    .itemCarrousel__text{
+        position: absolute;
+        bottom: 270px;
+        left: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: 40px;
+        
+        text-align: center;
+        
+        color: whitesmoke;
+
+        cursor: default;
+    }
+        .itemCarrousel__text h2{
+            font-size: calc(30px + 0.8vw);
+            filter: drop-shadow(0px 0px 50px #ffffff);
+        }
+
+        .itemCarrousel__text p{
+            font-size: calc(15px + 0.5vw);
+            font-weight: 500;
+        }
+
+#itemCarrousel-1{
+    background: url(../media/images/god-of-war-ragnarok-carrousel.jpg);
+    background-size: cover;
+}
+    #itemCarrousel-1 .itemCarrousel__text{
+        color: #050505;
+        text-shadow: 2px 2px 20px whitesmoke,
+            -1px 0px 30px whitesmoke;
+    }
+
+#itemCarrousel-2{
+    background: url(../media/images/1292495.jpg);
+    background-size: cover;
+    background-position: center;
+}
+    #itemCarrousel-2 .itemCarrousel__text,
+    #itemCarrousel-3 .itemCarrousel__text{
+        text-shadow: 2px 2px 20px rgb(0, 0, 0),
+            -1px 0px 30px rgb(0, 0, 0);
+    }
+
+#itemCarrousel-3{
+    background: url(../media/images/spiderman2-cover.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.carrouselController{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 50px 5px #050505;
+}
+    .carrouselController__box{
+        position: relative;
+        display: flex;
+        
+        width: 33.36%;
+        height: 250px;
+
+        text-decoration: none;
+
+
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 10;
+    }
+        .carrouselController__box:hover{
+            box-shadow: 0px 0px 20px 5px rgb(255, 255, 255);
+        }
+            .carrouselController__box:hover img{
+                width: 100%;
+
+                transition: 0.5s;
+            }
+            .carrouselController__box:hover .carrouselController__box__text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+
+                background-color: rgba(255, 255, 255, 0.5);
+                color: #050505
+            }
+
+            .carrouselController__box:hover i{
+                margin-bottom: 10px;
+
+                font-size: 1.5em;
+                
+                transform: rotate(90deg);
+
+                transition: 0.5s;
+            }
+
+            .carrouselController__box:hover h3{
+                font-size: 1.2em;
+
+                transition: 0.3s;
+            }
+                
+            .carrouselController__box img{
+                width: 50%;
+                height: 100%;
+        
+                object-fit: cover;
+        
+                transition: 0.5s;
+            }
+    .carrouselController__box--3{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        height:350px;
+
+        box-shadow: 0px 0px 50px 10px #050505;
+
+        background: url(../media/images/1177617.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+        .carrouselController__box--3 .carrouselController__box__text{
+            flex-direction: column;
+
+            width: 100%;
+            height: 30%;
+
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+            .carrouselController__box--3:hover .carrouselController__box__text{
+                height: 100%;
+            }
+
+
+        .carrouselController__box__text{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            width: 50%;
+            height: 100%;
+            
+            /* font-size: 1.5em; */
+            
+            color: whitesmoke;
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 30px 2px #000;
+            
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            transition: 0.2s;
+            z-index: 10;
+        }
+            .carrouselController__box__text i{
+                transition: 0.5s;
+                font-size: calc(12px + 0.6vw);
+            }
+            
+            .carrouselController__box__text h3{
+                margin: 5px;
+                margin-left: 10px;
+                
+                font-size: calc(12px + 0.5vw);
+            }
+
+
+            footer{
+                display: flex;
+                flex-direction: column;
+            
+                width: 100%;
+                height: 300px;
+            
+                background-color: #050505;
+            }
+            
+                .footer__principal{
+                    display: flex;
+                    width: 100%;
+                    height: 80%;
+                }
+            
+                .footer__links{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+            
+                    width: 30%;
+                    height: 100%;
+                    margin-top: 50px;
+            
+                    font-size: 1.2em;
+                    font-weight: 600;
+            
+                    color: whitesmoke;
+                }
+                    .footer__links  p{
+                        margin-top: 10px;
+                        margin-bottom: 0px;
+            
+                        cursor: default;
+                    }
+            
+                    .footer__links ul{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+            
+                        width: 70%;
+                        height: 80%;
+            
+                        list-style: none;
+                    }
+                        .footer__links li{
+                            margin-right: 40px;
+                        }
+                            .footer__links a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+            
+                                text-decoration: none;
+                                font-size: 0.9em;
+            
+                                color: whitesmoke;
+            
+                                transition: 0.2s;
+                            }
+                                .footer__links a:hover{
+                                    font-size: 1.5em;
+                                    padding: 10px;
+            
+                                    border-radius: 20px;
+            
+                                    color: #050505;
+                                    background-color: whitesmoke;
+                                }
+            
+                            .footer__links i{
+                                margin-right: 10px;
+                            }
+            
+                .asistencia{
+                    width: 40%;
+                    height: 100%;
+                }
+                    .asistencia a:hover{
+                        font-size: inherit;
+                        padding: 0px;
+                        font-size: 0.9em;
+            
+                        border-radius: 0px;
+            
+                        color: rgb(180, 180, 180);
+                        background-color: inherit;
+                    }
+            
+                .footer__logos{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            
+                    width: 30%;
+                    height: 100%;
+                }
+                    .footer__logos img{
+                        margin-right: 60px;
+            
+                        height: 25%;
+                        width: auto;
+                    }
+            
+                    .footer__logos img:nth-child(3):hover{
+                        box-shadow: 0px 0px 10px 1px whitesmoke;
+                    }
+            
+                .footer__derechos{
+                    padding: 20px;
+            
+                    text-align: center;
+            
+                    cursor: default;
+            
+                    background-color: #050505;
+                }
+                    .footer__derechos p{
+                        font-size: calc(8px + 0.6vw);
+            
+                        margin-bottom: 0px;
+            
+                        color: whitesmoke;
+                    }
+
+@media (max-width:1440px){
+    .grid-landing{
+        grid-template-rows: 110px 100px 700px;
+    }
+        .carrousel-landing__aside{
+            bottom: 250px;
+            height: 600px;
+        }
+
+        .carrouselController__box{
+            height: 250px;
+        }
+
+        .carrouselController__box--3{
+            height:300px;
+        }
+
+    
+    .footer__logos img{
+        margin: 5px;
+        height: 20%;
+    }
+
+    .footer__links a{
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width:1024px){
+    .grid-landing{
+        grid-template-rows: 110px 80px 700px;
+    }
+
+    
+    .botonera{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        justify-content: center;
+    }
+        .botonera__search-form{
+            margin-right: 0px;
+        }
+
+    #itemCarrousel-1{
+        background: url(../media/images/god-of-war-ragnarok-carrousel.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carrousel-landing__aside{
+        display: none;
+    }
+
+    .aside-responsive{
+        display: flex;
+
+        width: 100vw;
+        height: 300px;
+
+        background: url(../media/images/playstation-vr-tablet.jpg);
+        background-size: cover;
+    }
+        .aside-responsive .aside-grid__text--responsive{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            width: 100%;
+            height: 100%;
+
+            margin-right: 70px;
+        }
+
+        .aside-responsive .aside-grid__text--responsive .aside-button{
+            margin-top: -10px;
+            margin-right: 22px;
+        }
+
+    .itemCarrousel__text{
+        left: 0px;
+        bottom: 250px;
+
+        margin-bottom: 0px;
+    }
+        
+
+    .carrouselController__box{
+        height: 200px;
+    }
+        .carrouselController__box__text{
+            flex-direction: column;
+        }
+
+    .carrouselController__box--3{
+        height:250px;
+    }
+
+
+    footer{
+        height: auto;
+    }
+        .footer__principal{
+            height: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 150px 200px;
+            grid-template-areas: 
+            "links asistencia"
+            "logos logos"
+            ;
+        }
+
+        .footer__links{
+            width: 100%;
+
+            grid-area: links;
+
+        }
+            .footer__links p{
+                font-size: calc(12px + 0.4vw);
+            }
+            .footer__links a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                text-decoration: none;
+                font-size: calc(8px + 0.6vw);
+
+                color: whitesmoke;
+
+                transition: 0.2s;
+            }
+
+        .asistencia{
+            grid-area: asistencia;
+
+        }
+
+            .footer__logos{
+                width: 100%;
+                grid-area: logos;
+            }
+                .footer__logos img{
+                    margin: 20px;
+
+                    height: 35%;
+                    width: auto;
+                }
+}
+
+@media (max-width:768px){
+    .link-button{
+        padding: 8px 26px 8px 26px;
+
+        font-size: calc(10px + 0.5vw);
+    }
+
+    .aside-responsive{
+        height: 300px;
+
+        background: url(../media/images/playstation-vr-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .footer__links ul{
+        width: 90%;
+    }
+
+    .footer__links p{
+        font-size: calc(15px + 0.2vw);
+    }
+
+    .footer__links a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+        font-size: calc(10px + 0.4vw);
+
+        color: whitesmoke;
+
+        transition: 0.2s;
+    }
+    .footer__logos img{
+        height: 30%;
+        width: auto;
+    }
+}
+
+@media (max-width:600px){
+    .navbar-brand{
+        padding: 15px;
+    }
+
+    .grid-landing{
+        grid-template-rows: 82px 110px 400px;
+    }
+        .itemCarrousel__text{
+            left: 0px;
+            bottom: 50px;
+
+            margin-bottom: 0px;
+        }
+            .itemCarrousel__text h2{
+                font-size: calc(20px + 0.8vw);
+            }
+
+            .itemCarrousel__text p{
+                width: 90%;
+
+                font-size: calc(12px + 0.6vw);
+            }
+            .itemCarrousel__text br{
+                display: none;
+            }
+        
+        #itemCarrousel-1{
+            background-position: center 70px;
+        }
+        #itemCarrousel-2{
+            background-position: center 70px;
+        }
+        
+        #itemCarrousel-3{
+            background-position: center 70px;
+        }
+            #itemCarrousel-3 .itemCarrousel__text{
+
+                color: #050505;
+                text-shadow: 3px 3px 20px #ffffff,
+                -2px 1px 30px #ffffff;
+                font-size: calc(15px + 0.8vw);
+                font-weight: 600;
+            }
+
+    .carrouselController{
+        position: relative;
+        display: flex;
+    
+        width: auto;
+        justify-content: initial;
+        box-shadow: 0px 0px 50px 5px #050505;
+        overflow-x: scroll;
+    }
+        .carrouselController::-webkit-scrollbar{
+            display: none;
+        }
+
+        .carrouselController__box{
+            position: relative;
+            display: flex;
+            
+            min-width: 300px;
+            height: 250px;
+    
+            text-decoration: none;
+    
+    
+            overflow: hidden;
+            transition: 0.5s;
+            z-index: 10;
+        }
+            .carrouselController__box img{
+                width: 100%;
+            }
+
+            .carrouselController__box__text{
+                bottom: 0;
+
+                width: 100%;
+                height: 20%;
+            }
+                .carrouselController__box__text h3{
+                    display: none;
+                }
+                .carrouselController__box:hover
+                .carrouselController__box__text{
+                    height: 100%;
+                }
+                .carrouselController__box:hover
+                .carrouselController__box__text h3{
+                    display: block;
+                }
+
+            .carrouselController__box--3{
+                box-shadow: none;
+            }
+
+            .carrouselController__box--3 .carrouselController__box__text{
+                height: 20%;
+
+                color: whitesmoke;
+                background-color: rgba(255, 255, 255, 0.08);
+                box-shadow: 0px 0px 30px 2px #000;
+                
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                transition: 0.2s;
+                z-index: 10;
+            }
+
+
+    .aside-responsive{
+        height: 260px;
+
+        margin-top: 250px;
+
+        background-position: left;
+    }
+
+    .botonera{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        .botonera__login-container{
+            margin: 10px;
+
+            font-size: calc(15px + 0.8vw)
+        }
+            .botonera__search-form input{
+                margin: 0px;
+                padding: 10px;
+                width: 200px;
+
+                border-radius: 25px;
+                outline: none;
+            }
+
+            .botonera__search-form button{
+                top: 0px;
+                right: 0px;
+
+                padding: 10px;
+            }
+
+
+            .footer__principal{
+                height: auto;
+    
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 120px 120px 120px;
+                grid-template-areas: 
+                "links"
+                "asistencia"
+                "logos"
+                ;
+            }
+                .footer__links ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+        
+                    width: 100%;
+                    height: 80%;
+        
+                    list-style: none;
+                }
+    
+                .footer__logos img{
+                    margin: 30px 10px 10px 10px;
+        
+                    height: 30%;
+                }
+}
+
+@media (max-width:425px){
+    .grid-landing{
+        grid-template-rows: 82px 110px 350px;
+    }
+
+    .itemCarrousel__text{
+        bottom: 30px;
+    }
+
+    .carrouselController__box{
+        position: relative;
+        display: flex;
+        
+        min-width: 300px;
+        height: 200px;
+
+        text-decoration: none;
+
+
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 10;
+    }
+    
+
+    #itemCarrousel-1{
+        background-position: -100px 70px;
+    }
+    
+    #itemCarrousel-3{
+        background-position: center 80px;
+    }
+
+    .aside-responsive{
+        margin-top: 200px;
+    }
+        .aside-responsive .aside-grid__text--responsive{
+            margin-right: 10px;
+        }
+            .aside-responsive .aside-grid__text--responsive h2{
+                font-size: calc(18px + 1vw);
+            }
+
+            .aside-responsive .aside-grid__text--responsive .aside-button{
+                margin-top: -10px;
+                margin-right: 22px;
+
+                padding: 6px 12px;
+            }
+}

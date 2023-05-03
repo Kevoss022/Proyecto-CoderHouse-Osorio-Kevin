@@ -1,0 +1,272 @@
+.main-asistencia{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 120vh;
+
+    @include lg{
+        height: auto;
+    }
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        background: url(../media/images/asistencia-bck.jpg);
+        background-size: cover;
+        -webkit-filter: blur(10px);
+        filter: blur(50px);
+
+        z-index: -1;
+    }
+
+    .main-asistencia__container{
+        display: flex;
+
+        margin-top: 220px;
+
+        width: 70%;
+        height: 800px;
+
+        border-radius: 20px;
+        
+        @include xl{
+            background-size: contain;
+            width: 85%;
+        }
+
+        @include lg{
+            flex-direction: column;
+
+            margin-top: 110px;
+
+            width: 100%;
+            height: 1000px;
+        }
+
+        @include ms{
+            margin-top: 80px;
+        }
+
+        .main-asistencia__container__text{
+            width: 50%;
+            height: 100%;
+
+            background: url(../media/images/asistencia-bck.jpg);
+            background-size: cover;
+            background-position: center;
+
+            @include lg{
+                width: 100%;
+                height: 40%;
+            }
+
+        }
+        
+        .main-asistencia__container__form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 50%;
+            height: 100%;
+
+            text-shadow: 3px 3px 20px rgb(158, 158, 158), -2px 1px 30px rgb(143, 143, 143);
+            
+            color: whitesmoke;
+            background: linear-gradient(to right, #0f0c29 40%, #130e4e 60%, #411111) 100%;
+
+            @include lg{
+                width: 100%;
+                height: 60%;
+            }
+            
+            h1{
+                width: 100%;
+
+                text-align: center;
+                font-size: calc(20px + 0.8vw);
+                
+                @include sm{
+                    font-size: calc(15px + 0.8vw);
+                }
+            }
+            
+            p{
+                width: 100%;
+
+                margin-top: 20px;
+                
+                text-align: center;
+                font-size: calc(12px + 0.5vw);
+            }
+
+            .asistencia-form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 600px;
+                height: 600px;
+                border-radius: 80px;
+        
+                .div-asistencia-form{
+                    text-align: center;
+
+                    input{
+                        width: 300px;
+                        height: 40px;
+                        margin: 30px auto -20px auto;
+                        padding: 10px;
+
+                        border-radius: 5px 5px;
+                        outline: 5px solid whitesmoke;
+                        border: none;
+                        
+                        background-color: whitesmoke;
+                        caret-color: whitesmoke;
+                        
+                        transition: 1s;
+                        
+                        @include sm{
+                            width: 75%;
+                            height: 30px;
+
+                            border-radius: 10px 10px;
+                        }
+
+                        &::placeholder{
+                            color: #130e4e;
+                        }
+            
+                        &[type="text"]:focus{
+                            background-color: whitesmoke;
+                            box-shadow: whitesmoke 0px 0px 20px 3px;
+                
+                            transition: .5s;
+                        }
+
+                        &[type="email"]:focus{
+                            background-color: whitesmoke;
+                            box-shadow: whitesmoke 0px 0px 20px 3px;
+                
+                            transition: .5s;
+                        }
+                    }
+
+                    textarea{
+                        width: 400px;
+                        height: 250px;
+                    
+                        margin-top: 50px;
+                    
+                        border-radius: 10px;
+                        border: none;
+
+                        background-color: whitesmoke;
+                        outline: 1px solid whitesmoke;
+
+                        transition: .5s;
+
+                        @include lg{
+                            height: 150px;
+                        }
+
+                        @include sm{
+                            width: 80%;
+                            height: 100px;
+                        }
+
+                        &:focus{
+                            background-color: whitesmoke;
+                            box-shadow: whitesmoke 0px 0px 20px 3px;
+                            outline: 1px solid whitesmoke;
+                
+                            transition: .5s;
+                        }
+                    }
+                }
+
+                  button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 150px;
+                    padding: 30px;
+                    
+                    margin-top: 20px;
+                    
+                    border: 2px solid #302b63;
+                    border-radius: 50px;
+                    
+                    background: none;
+                    
+                    cursor: pointer;
+                    transition: .4s;
+
+                    @include sm{
+                        padding: 20px 90px;
+                    }
+                }
+                
+                button:hover {
+                    width: 170px;
+
+                    border: 2px solid whitesmoke;
+                    
+                    box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+                }
+                
+                span{
+                    position: absolute;
+                    color: #302b63;
+                    transition: .4s;
+                  }
+                  
+                  button:hover span {
+                      font-size: 16px;
+                      font-weight: bolder;
+                      
+                      color: whitesmoke;
+                      
+                      transition: .4s;
+                  }
+            }
+        }
+
+        @keyframes spin {
+            80% {
+              border: 2px solid transparent;
+              border-left: 2px solid #932e3e;
+            }
+            100% {
+              transform: rotate(1080deg);
+              border: 2px solid #932e3e;
+            }
+          }
+          
+          @keyframes check {
+            to {
+              fill: #932e3e;
+            }
+          }
+          
+          @keyframes circle {
+            to {
+              border: 2px solid #932e3e;
+            }
+          }
+    }
+
+}
+
