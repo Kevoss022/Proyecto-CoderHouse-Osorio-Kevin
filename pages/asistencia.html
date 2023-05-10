@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg nav-color nav-color--asistencia fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand ms-5" href="../index.html">
-                <img src="../media/images/playstation-logo.svg" alt="Logo de Playstation">
+                <img src="../media/images/Playstation_logo_colour.svg" alt="Logo de Playstation">
               </a>
               <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
 
     <main class="main-asistencia">
         <div class="botonera botonera--asistencia">
-            <div class="botonera__login-container">
+            <div class="botonera__login-container botonera--asistencia__login-container">
                 <a href="#">
                     Iniciar sesión en PS / Registrarse
                 </a>
@@ -64,22 +64,29 @@
                     <h1>
                         Contactanos o escíbenos tu duda.
                     </h1>
-                    <p>
+                    <p class="p-title">
                         ¿Cómo podemos ayudar? 
                     </p>
-        
-                    <div class="div-asistencia-form">
-                        <input type="text" placeholder="Nombre y apellido." id="nombre-y-apellido">
+
+                    <div class="form__container">
+                        <div class="form__group">
+                            <input type="text" id="user" class="form__input" placeholder=" ">
+                            <label for="user" class="form__label">Usuario:</label>
+                            <p class="paragraph-link">
+                                ¿No tienes una cuenta todavía? <a href="#">Puedes crear una aquí.</a>
+                            </p>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" id="email" class="form__input" placeholder=" ">
+                            <label for="email" class="form__label">Email:</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea id="review" maxlength="4000"></textarea>
+                            <label for="review" class="form__label form__label--textarea">Escribe tu reseña aquí:</label>
+                        </div>
+
+                         <input type="submit" class="form__submit" value="enviar">
                     </div>
-                    <div class="div-asistencia-form">
-                        <input type="email" placeholder="Email." id="email">
-                    </div>
-                    <div class="div-asistencia-form">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu comentario."></textarea>
-                    </div>
-                    <button>
-                        <span>Enviar comentario</span>
-                    </button>
         
                 </form>
             </div>

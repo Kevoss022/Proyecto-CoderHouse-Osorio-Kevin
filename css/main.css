@@ -107,11 +107,10 @@ nav .nav-link {
   margin-right: 60px;
   font-size: calc(12px + 0.5vw);
   color: whitesmoke;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 nav .nav-link:hover {
-  color: #050505;
-  text-shadow: 3px 3px 20px #050505, -2px 1px 30px #050505;
+  color: rgba(41, 41, 41, 0.5);
 }
 nav .navbar-togglers {
   background: whitesmoke;
@@ -138,7 +137,12 @@ nav .navbar-togglers {
   }
 }
 .nav-color--asistencia {
-  background-image: linear-gradient(to right, #0f0c29, #070613, #1e1e63);
+  border-bottom: none;
+  background-image: linear-gradient(to right, #fff 0%, rgb(163, 163, 163) 400%);
+  box-shadow: none;
+}
+.nav-color--asistencia .nav-link {
+  color: #050505;
 }
 
 .botonera {
@@ -226,7 +230,7 @@ nav .navbar-togglers {
   border-radius: 20px 0px 0px 20px;
   outline: 2px solid whitesmoke;
   background-color: #050505;
-  caret-color: whitesmoke;
+  caret-color: #050505;
   transition: 1s;
 }
 @media (max-width: 600px) {
@@ -311,6 +315,11 @@ nav .navbar-togglers {
   align-items: center;
   width: 100%;
   height: 100px;
+  background-color: none;
+  box-shadow: none;
+}
+.botonera--asistencia__login-container a {
+  color: #050505;
 }
 @media (max-width: 1440px) {
   .botonera--asistencia {
@@ -325,7 +334,7 @@ nav .navbar-togglers {
 @media (max-width: 600px) {
   .botonera--asistencia {
     height: 150px;
-    top: 80px;
+    top: 70px;
   }
 }
 .botonera--servicios {
@@ -1206,18 +1215,17 @@ nav .navbar-togglers {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../media/images/asistencia-bck.jpg);
-  background-size: cover;
-  -webkit-filter: blur(10px);
-  filter: blur(50px);
+  background-color: #fff;
   z-index: -1;
 }
 .main-asistencia .main-asistencia__container {
   display: flex;
-  margin-top: 220px;
   width: 70%;
   height: 800px;
+  margin-top: 220px;
   border-radius: 20px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 @media (max-width: 1440px) {
   .main-asistencia .main-asistencia__container {
@@ -1241,14 +1249,19 @@ nav .navbar-togglers {
 .main-asistencia .main-asistencia__container .main-asistencia__container__text {
   width: 50%;
   height: 100%;
-  background: url(../media/images/asistencia-bck.jpg);
-  background-size: cover;
+  background: url(../media/images/background-asistencia.jpg);
+  background-size: 150%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 @media (max-width: 1024px) {
   .main-asistencia .main-asistencia__container .main-asistencia__container__text {
     width: 100%;
-    height: 40%;
+    height: 30%;
+    background: url(../media/images/background-asistencia.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 }
 .main-asistencia .main-asistencia__container .main-asistencia__container__form {
@@ -1257,156 +1270,192 @@ nav .navbar-togglers {
   align-items: center;
   width: 50%;
   height: 100%;
-  text-shadow: 3px 3px 20px rgb(158, 158, 158), -2px 1px 30px rgb(143, 143, 143);
-  color: whitesmoke;
-  background: linear-gradient(to right, #0f0c29 40%, #130e4e 60%, #411111) 100%;
+  color: #050505;
 }
 @media (max-width: 1024px) {
   .main-asistencia .main-asistencia__container .main-asistencia__container__form {
     width: 100%;
-    height: 60%;
+    height: 70%;
   }
-}
-.main-asistencia .main-asistencia__container .main-asistencia__container__form h1 {
-  width: 100%;
-  text-align: center;
-  font-size: calc(20px + 0.8vw);
-}
-@media (max-width: 425px) {
-  .main-asistencia .main-asistencia__container .main-asistencia__container__form h1 {
-    font-size: calc(15px + 0.8vw);
-  }
-}
-.main-asistencia .main-asistencia__container .main-asistencia__container__form p {
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-  font-size: calc(12px + 0.5vw);
 }
 .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 600px;
+  width: 100%;
   border-radius: 80px;
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form {
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form h1 {
+  width: 80%;
   text-align: center;
-}
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form input {
-  width: 300px;
-  height: 40px;
-  margin: 30px auto -20px auto;
-  padding: 10px;
-  border-radius: 5px 5px;
-  outline: 5px solid whitesmoke;
-  border: none;
-  background-color: whitesmoke;
-  caret-color: whitesmoke;
-  transition: 1s;
+  font-size: calc(12px + 1vw);
+  cursor: default;
 }
 @media (max-width: 425px) {
-  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form input {
-    width: 75%;
-    height: 30px;
-    border-radius: 10px 10px;
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form h1 {
+    font-size: calc(15px + 0.8vw);
   }
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form input::placeholder {
-  color: #130e4e;
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .p-title {
+  width: 100%;
+  text-align: center;
+  font-size: calc(12px + 0.5vw);
+  cursor: default;
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form input[type=text]:focus {
-  background-color: whitesmoke;
-  box-shadow: whitesmoke 0px 0px 20px 3px;
-  transition: 0.5s;
-}
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form input[type=email]:focus {
-  background-color: whitesmoke;
-  box-shadow: whitesmoke 0px 0px 20px 3px;
-  transition: 0.5s;
-}
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form textarea {
-  width: 400px;
-  height: 250px;
-  margin-top: 50px;
-  border-radius: 10px;
-  border: none;
-  background-color: whitesmoke;
-  outline: 1px solid whitesmoke;
-  transition: 0.5s;
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container {
+  display: grid;
+  gap: 2.5em;
+  margin-top: 2em;
 }
 @media (max-width: 1024px) {
-  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form textarea {
-    height: 150px;
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container {
+    gap: 3em;
   }
 }
-@media (max-width: 425px) {
-  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form textarea {
-    width: 80%;
-    height: 100px;
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  font-size: calc(5px + 0.7vw);
+  font-family: "Open Sans", sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(206, 206, 206);
+  transition: 0.2s;
+}
+@media (max-width: 1024px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input {
+    font-size: calc(5px + 1vw);
   }
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .div-asistencia-form textarea:focus {
-  background-color: whitesmoke;
-  box-shadow: whitesmoke 0px 0px 20px 3px;
-  outline: 1px solid whitesmoke;
+@media (max-width: 768px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input {
+    font-size: calc(8px + 1vw);
+  }
+}
+@media (max-width: 600px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input {
+    font-size: calc(10px + 1vw);
+  }
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input:focus + .form__label, .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input:not(:placeholder-shown) + .form__label {
+  transform: translateY(-30px) scale(0.9);
+  transform-origin: left top;
+  color: rgb(170, 170, 170);
+  transition: 0.3s;
+}
+@media (max-width: 1024px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input:focus + .form__label, .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-20px) scale(0.9);
+  }
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group textarea {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  margin-top: 10px;
+  font-size: calc(5px + 0.7vw);
+  font-family: "Open Sans", sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(206, 206, 206);
+  transition: 0.2s;
+}
+@media (max-width: 1024px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group textarea {
+    font-size: calc(5px + 1vw);
+  }
+}
+@media (max-width: 768px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group textarea {
+    font-size: calc(8px + 1vw);
+  }
+}
+@media (max-width: 600px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group textarea {
+    font-size: calc(10px + 1vw);
+  }
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  cursor: pointer;
+  color: rgb(206, 206, 206);
+  transform: translateY(5px);
+  transform: transform 0.5s, color 0.3s;
   transition: 0.5s;
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  padding: 30px;
-  margin-top: 20px;
-  border: 2px solid #302b63;
-  border-radius: 50px;
-  background: none;
-  cursor: pointer;
-  transition: 0.4s;
+@media (max-width: 1440px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__label {
+    top: 2px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__label {
+    top: -5px;
+  }
 }
 @media (max-width: 425px) {
-  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form button {
-    padding: 20px 90px;
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__label {
+    top: -2px;
   }
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form button:hover {
-  width: 170px;
-  border: 2px solid whitesmoke;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
-}
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form span {
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__label--textarea {
   position: absolute;
-  color: #302b63;
-  transition: 0.4s;
+  top: -12px;
+  left: 5px;
 }
-.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form button:hover span {
-  font-size: 16px;
+@media (max-width: 1024px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .form__label--textarea {
+    top: -18px;
+  }
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .paragraph-link {
+  margin-top: 5px;
+  font-size: 0.9em;
   font-weight: bolder;
-  color: whitesmoke;
-  transition: 0.4s;
 }
-@keyframes spin {
-  80% {
-    border: 2px solid transparent;
-    border-left: 2px solid #932e3e;
-  }
-  100% {
-    transform: rotate(1080deg);
-    border: 2px solid #932e3e;
+@media (max-width: 425px) {
+  .main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .paragraph-link {
+    font-size: 0.8em;
   }
 }
-@keyframes check {
-  to {
-    fill: #932e3e;
-  }
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .paragraph-link a {
+  color: rgb(170, 170, 170);
+  text-decoration: none;
+  transition: 0.2s;
 }
-@keyframes circle {
-  to {
-    border: 2px solid #932e3e;
-  }
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__group .paragraph-link a:hover {
+  color: #050505;
+  transition: 0.2s;
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__submit {
+  border: none;
+  width: 90%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(5, 5, 5, 0.4);
+  background-color: #fff;
+  box-shadow: whitesmoke 0px -50px 36px -28px inset;
+  transition: 0.5s;
+}
+.main-asistencia .main-asistencia__container .main-asistencia__container__form .asistencia-form .form__container .form__submit:hover {
+  color: rgba(5, 5, 5, 0.7);
+  box-shadow: rgb(204, 204, 204) 0px -50px 36px -28px inset;
+  transition: 0.5s;
 }
 
 footer {

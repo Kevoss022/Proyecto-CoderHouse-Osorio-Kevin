@@ -33,12 +33,9 @@ nav{
         
         color: whitesmoke;
         
-        transition: 0.5s;
+        transition: .4s;
         &:hover{
-            color: #050505;
-            
-            text-shadow: 3px 3px 20px #050505,
-            -2px 1px 30px #050505;
+            color: rgba(41, 41, 41, 0.5);
         }
     }
     
@@ -73,6 +70,14 @@ nav{
     }
 
     &--asistencia{
-        background-image: linear-gradient(to right, #0f0c29, #070613, #1e1e63);
+        border-bottom: none;
+
+        background-image: linear-gradient(to right, #fff 0%, rgb(163, 163, 163) 400%);
+
+        box-shadow: none;
+
+        .nav-link{
+            color: #050505;
+        }
     }
 }

@@ -19,24 +19,24 @@
         
         width: 100%;
         height: 100%;
-        
-        background: url(../media/images/asistencia-bck.jpg);
-        background-size: cover;
-        -webkit-filter: blur(10px);
-        filter: blur(50px);
 
+        background-color: #fff;
+        
         z-index: -1;
     }
-
+    
     .main-asistencia__container{
         display: flex;
-
-        margin-top: 220px;
-
+        
         width: 70%;
         height: 800px;
 
+        margin-top: 220px;
         border-radius: 20px;
+
+        background-color: #fff;
+        
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         
         @include xl{
             background-size: contain;
@@ -60,13 +60,19 @@
             width: 50%;
             height: 100%;
 
-            background: url(../media/images/asistencia-bck.jpg);
-            background-size: cover;
+            background: url(../media/images/background-asistencia.jpg);
+            background-size: 150%;
+            background-repeat: no-repeat;
             background-position: center;
 
             @include lg{
                 width: 100%;
-                height: 40%;
+                height: 30%;
+
+                background: url(../media/images/background-asistencia.jpg);
+                background-size: 30%;
+                background-repeat: no-repeat;
+                background-position: bottom;
             }
 
         }
@@ -78,194 +84,232 @@
             
             width: 50%;
             height: 100%;
-
-            text-shadow: 3px 3px 20px rgb(158, 158, 158), -2px 1px 30px rgb(143, 143, 143);
             
-            color: whitesmoke;
-            background: linear-gradient(to right, #0f0c29 40%, #130e4e 60%, #411111) 100%;
+            color: #050505;
 
             @include lg{
                 width: 100%;
-                height: 60%;
+                height: 70%;
             }
             
-            h1{
-                width: 100%;
-
-                text-align: center;
-                font-size: calc(20px + 0.8vw);
-                
-                @include sm{
-                    font-size: calc(15px + 0.8vw);
-                }
-            }
             
-            p{
-                width: 100%;
-
-                margin-top: 20px;
-                
-                text-align: center;
-                font-size: calc(12px + 0.5vw);
-            }
-
             .asistencia-form{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
-                width: 600px;
-                height: 600px;
+                width: 100%;
                 border-radius: 80px;
-        
-                .div-asistencia-form{
+                
+                h1{
+                    width: 80%;
+    
                     text-align: center;
+                    font-size: calc(12px + 1vw);
 
-                    input{
-                        width: 300px;
-                        height: 40px;
-                        margin: 30px auto -20px auto;
-                        padding: 10px;
-
-                        border-radius: 5px 5px;
-                        outline: 5px solid whitesmoke;
-                        border: none;
-                        
-                        background-color: whitesmoke;
-                        caret-color: whitesmoke;
-                        
-                        transition: 1s;
-                        
-                        @include sm{
-                            width: 75%;
-                            height: 30px;
-
-                            border-radius: 10px 10px;
-                        }
-
-                        &::placeholder{
-                            color: #130e4e;
-                        }
-            
-                        &[type="text"]:focus{
-                            background-color: whitesmoke;
-                            box-shadow: whitesmoke 0px 0px 20px 3px;
-                
-                            transition: .5s;
-                        }
-
-                        &[type="email"]:focus{
-                            background-color: whitesmoke;
-                            box-shadow: whitesmoke 0px 0px 20px 3px;
-                
-                            transition: .5s;
-                        }
-                    }
-
-                    textarea{
-                        width: 400px;
-                        height: 250px;
+                    cursor: default;
                     
-                        margin-top: 50px;
-                    
-                        border-radius: 10px;
-                        border: none;
-
-                        background-color: whitesmoke;
-                        outline: 1px solid whitesmoke;
-
-                        transition: .5s;
-
-                        @include lg{
-                            height: 150px;
-                        }
-
-                        @include sm{
-                            width: 80%;
-                            height: 100px;
-                        }
-
-                        &:focus{
-                            background-color: whitesmoke;
-                            box-shadow: whitesmoke 0px 0px 20px 3px;
-                            outline: 1px solid whitesmoke;
-                
-                            transition: .5s;
-                        }
-                    }
-                }
-
-                  button {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 150px;
-                    padding: 30px;
-                    
-                    margin-top: 20px;
-                    
-                    border: 2px solid #302b63;
-                    border-radius: 50px;
-                    
-                    background: none;
-                    
-                    cursor: pointer;
-                    transition: .4s;
-
                     @include sm{
-                        padding: 20px 90px;
+                        font-size: calc(15px + 0.8vw);
                     }
                 }
                 
-                button:hover {
-                    width: 170px;
-
-                    border: 2px solid whitesmoke;
+                .p-title{
+                    width: 100%;
                     
-                    box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+                    text-align: center;
+                    font-size: calc(12px + 0.5vw);
+                    
+                    cursor: default;
                 }
-                
-                span{
-                    position: absolute;
-                    color: #302b63;
-                    transition: .4s;
-                  }
-                  
-                  button:hover span {
-                      font-size: 16px;
-                      font-weight: bolder;
-                      
-                      color: whitesmoke;
-                      
-                      transition: .4s;
-                  }
+
+                .form__container{
+                    display: grid;
+                    gap: 2.5em;
+
+                    margin-top: 2em;
+
+                    @include lg{
+                        gap: 3em;
+                    }
+
+                    .form__group{
+                        position: relative;
+
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        width: 90%;
+
+
+                        .form__input{
+                            width: 100%;
+
+                            padding: .5em .5em;
+
+                            font-size: calc(5px + 0.7vw);
+                            font-family: "Open Sans", sans-serif;
+                            
+                            background: none;
+                            border: none;
+                            outline: none;
+                            border-bottom: 2px solid rgb(206, 206, 206);
+                            
+                            transition: 0.2s;
+                            
+                            @include lg{
+                                font-size: calc(5px + 1vw);
+                            }
+                            
+                            @include md{
+                                font-size: calc(8px + 1vw);
+                            }
+                            
+                            @include ms{
+                                font-size: calc(10px + 1vw);
+                            }
+                            
+                            &:focus + .form__label,
+                            &:not(:placeholder-shown) + .form__label{
+                                transform: translateY(-30px) scale(.9);
+                                transform-origin: left top;
+                                
+                                color: rgb(170, 170, 170);
+                                transition: .3s;
+                                
+                                @include lg{
+                                    transform: translateY(-20px) scale(.9);
+                                }
+                            }
+                        }
+
+                        textarea{
+                            width: 100%;
+
+                            padding: .5em .5em;
+                            margin-top: 10px;
+
+                            font-size: calc(5px + 0.7vw);
+                            font-family: "Open Sans", sans-serif;
+                            
+                            background: none;
+                            border: none;
+                            outline: none;
+
+                            border-bottom: 2px solid rgb(206, 206, 206);
+
+                            transition: 0.2s;
+
+                            @include lg{
+                                font-size: calc(5px + 1vw);
+                            }
+
+                            @include md{
+                                font-size: calc(8px + 1vw);
+                            }
+
+                            @include ms{
+                                font-size: calc(10px + 1vw);
+                            }
+                        }
+
+                        .form__label{
+                            position: absolute;
+                            top: 10px;
+                            left: 5px;
+                            
+                            cursor: pointer;
+                            
+                            color: rgb(206, 206, 206);
+                            
+                            transform: translateY(5px);
+                            transform: transform .5s, color .3s;
+                            transition: .5s;
+                            
+                            @include xl{
+                                top: 2px;
+                            }
+
+                            @include lg{
+                                top: -5px;
+                            }
+
+                            @include sm{
+                                top: -2px;
+                            }
+                        }
+
+                        .form__label--textarea{
+                            position: absolute;
+                            top: -12px;
+                            left: 5px;
+                            
+                            @include lg{
+                                top: -18px;
+                            }
+                        }
+
+                        .paragraph-link{
+                            margin-top: 5px;
+
+                            font-size: 0.9em;
+                            font-weight: bolder;
+                            
+                            @include sm{
+                                font-size: 0.8em;
+                            }
+
+                            a{
+                                color: rgb(170, 170, 170);
+
+                                text-decoration: none;
+
+                                transition: .2s;
+                                
+                                &:hover{
+                                    color: #050505;
+
+                                    transition: .2s;
+                                }
+                            }
+                        }
+                    }
+
+                    .form__submit{
+                        border: none;
+
+                        width: 90%;
+
+                        padding: 10px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border-radius: 50px;
+
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        font-family: "Open Sans", sans-serif;
+
+                        color: rgba(5, 5, 5, 0.4);
+                        
+                        background-color: #fff;
+                        
+                        box-shadow: whitesmoke 0px -50px 36px -28px inset;
+                        
+                        transition: .5s;
+                        
+                        &:hover{
+                            color: rgba(5, 5, 5, 0.7);
+
+                            box-shadow: rgb(204, 204, 204) 0px -50px 36px -28px inset;
+
+                            transition: .5s;
+                        }
+                    }
+                }
+
             }
         }
-
-        @keyframes spin {
-            80% {
-              border: 2px solid transparent;
-              border-left: 2px solid #932e3e;
-            }
-            100% {
-              transform: rotate(1080deg);
-              border: 2px solid #932e3e;
-            }
-          }
-          
-          @keyframes check {
-            to {
-              fill: #932e3e;
-            }
-          }
-          
-          @keyframes circle {
-            to {
-              border: 2px solid #932e3e;
-            }
-          }
     }
 
 }
