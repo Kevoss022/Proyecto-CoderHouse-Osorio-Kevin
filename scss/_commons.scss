@@ -57,25 +57,44 @@ body{
 .aside-button{
     background-color: #050505;
     backface-visibility: none;
-
+    
     @include lg{
         margin-top: -10px;
         margin-right: 22px;
     }
-
+    
     @include sm{
         margin-top: -10px;
         margin-right: 22px;
-
+        
         padding: 6px 12px;
     }
 }
-    .aside-button:hover{
+.aside-button:hover{
+    background-color: whitesmoke;
+    color: #0e0e0e;
+    
+    box-shadow: 0px 0px 50px 10px whitesmoke;
+}
+
+.hardware-button{
+    font-size: calc(8px + 0.5vw);
+    
+    background-color: #050505;
+    
+    &:hover{
         background-color: whitesmoke;
         color: #0e0e0e;
-
+        
         box-shadow: 0px 0px 50px 10px whitesmoke;
     }
+}
+
+.store-button{
+    padding: 8px 26px 8px 26px;
+
+    font-size: calc(5px + 0.5vw);
+}
 
 @keyframes rotate {
     0%{

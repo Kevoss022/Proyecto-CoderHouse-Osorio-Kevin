@@ -1,0 +1,54 @@
+.main-error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: #fff;
+
+    img{
+        width: 20%;
+        height: auto;
+        
+        @include md{
+            width: 40%;
+        }
+    }
+
+    h1{
+        font-size: calc(25px + 1vw);
+        
+        @include md{
+            font-size: calc(20px + 1vw);
+        }
+        
+        @include ms{
+            width: 80%;
+
+            font-size: calc(13px + 1vw);
+        }
+    }
+    
+    p{
+        font-size: calc(8px + 1vw);
+        
+        @include md{
+            font-size: calc(10px + 1vw);
+        }
+    }
+    
+    a{
+        color: #000;
+
+        transition: .2s;
+        
+        &:hover{
+            font-size: calc(2px + 1vw);
+
+            transition: .2s;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+.body-store{
+    background-color: whitesmoke;
+}
+
+.main-store{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin-top: 250px;
+}
+
+.juegos-container{
+    width: 90%;
+
+    margin-bottom: 200px;
+
+    text-align: center;
+
+    @include xl{
+        width: 95%;
+    }
+
+    @include lg{
+        width: 100%;
+    }
+
+    h1{
+        margin: 0px;
+        padding: 20px;
+
+
+        color: #fff;
+        background-color: #000;
+
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+
+        @include md{
+            font-size: 1.5em;
+        }
+    }
+
+    h2{
+        padding: 30px;
+        margin: 0px;
+
+        color: #000;
+        background-color: #fff;
+
+        @include md{
+            font-size: 1em;
+        }
+    }
+
+    .juegos-divs{
+        display: flex;
+
+        width: 100%;
+        height: 300px;
+
+        @include md{
+            display: grid;
+            height: auto;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 300px 300px;
+        }
+
+        .far-cry{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            
+            background-image: url(../media/images/far-cry.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .days-gone{
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+            background-image: url(../media/images/days-gone.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .red-dead-ii{
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            background-image: url(../media/images/red-dead.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .horizon-zero{
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+            background-image: url(../media/images/zero-dawn.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gta-v{
+            background-image: url(../media/images/gta-v.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .cod-mw{
+            background-image: url(../media/images/mwii.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .rocket-league{
+            background-image: url(../media/images/rocket-league.webp);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gran-turismo{
+            background-image: url(../media/images/gran-turismo-7.webp);
+            background-size: cover;
+            background-position: center;
+        }
+
+        &__box{
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 25%;
+            height: 100%;
+
+            overflow: hidden;
+
+            @include md{
+                width: 100%;
+            }
+
+            &__text{
+                position: absolute;
+                bottom: 0;
+
+                width: 100%;
+                height: 120px;
+
+
+                background-color: rgba(0, 0, 0, 0.5);
+
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
+
+                @include md{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                @include ms{
+                    height: 100px;
+                }
+
+                p{
+                    margin: 0px;
+                    padding: 5px;
+
+                    color: #fff;
+
+                    font-size: calc(10px + 1vw);
+                }
+            }
+        }
+    }
+}

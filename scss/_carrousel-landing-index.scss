@@ -134,7 +134,7 @@
                 }
 
                 p{
-                    font-size: calc(15px + 0.5vw);
+                    font-size: calc(15px + 0.6vw);
                     font-weight: 500;
 
                     @include ms{
@@ -159,7 +159,7 @@
 
 
 #itemCarrousel-1{
-    background: url(../media/images/god-of-war-ragnarok-carrousel.jpg);
+    background: url(../media/images/god-of-war-ragnarok-carrousel.webp);
     background-size: cover;
 
     @include lg{
@@ -171,14 +171,14 @@
     }
 
     .itemCarrousel__text{
-        color: #050505;
+        color: #000;
         text-shadow: 2px 2px 20px whitesmoke,
             -1px 0px 30px whitesmoke;
     }
 }
 
 #itemCarrousel-2{
-    background: url(../media/images/s-w-cover.jpg);
+    background: url(../media/images/s-w-cover.webp);
     background-size: cover;
     background-position: center;
 
@@ -193,7 +193,7 @@
 }
 
 #itemCarrousel-3{
-    background: url(../media/images/spiderman2-cover.jpg);
+    background: url(../media/images/spiderman2-cover.webp);
     background-size: cover;
     background-position: center;
 
@@ -340,7 +340,7 @@
         
             box-shadow: 0px 0px 50px 10px #050505;
         
-            background: url(../media/images/spiderman2-box.jpg);
+            background: url(../media/images/spiderman2-box.webp);
             background-size: cover;
             background-position: center;
 
@@ -379,14 +379,14 @@
         width: 100vw;
         height: 300px;
 
-        background: url(../media/images/playstation-vr-tablet.jpg);
+        background: url(../media/images/playstation-vr-tablet.webp);
         background-size: cover;
     }
 
     @include md{
         height: 300px;
 
-        background: url(../media/images/playstation-vr-mobile.jpg);
+        background: url(../media/images/playstation-vr-mobile.webp);
         background-size: cover;
         background-position: center;
     }

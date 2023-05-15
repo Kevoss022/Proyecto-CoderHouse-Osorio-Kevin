@@ -336,33 +336,6 @@
                         @include md{
                             grid-row: 1/2;
                         }
-
-                        // &::before{
-                        //     content: "";
-                        //     background-image: conic-gradient(
-                        //                     #ececec 20deg,
-                        //                     transparent 120deg);
-                        //     width: 250%;
-                        //     height: 250%;
-                        //     position: absolute;
-                        //     top: -120px;
-                        //     animation: rotate 4s linear infinite;
-                        // }
-
-                        // &::after{
-                        //     content: "";
-
-                        //     position: absolute;
-                        //     top: 2.8px;
-                        //     left: 4px;
-
-                        //     width: 97%;
-                        //     height: 96%;
-
-                        //     color: #ff0052;
-                        //     background: #101010;
-                        //     box-shadow: inset 20px 20px 20px #0000008c;
-                        // }
                     }
                     
                     &--2{
